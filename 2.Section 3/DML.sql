@@ -201,6 +201,30 @@
 			FROM academics.Students
 			ORDER BY FirstName DESC;
 
+	--> Update 
+		-- Update single column 
+		UPDATE academics.Students 
+		SET age = 26
+		WHERE StudentId = 7; 
+
+		-- Update multiple columns 
+		UPDATE academics.Students 
+		SET 
+			FirstName = 'Santosh', 
+			Branch_ID = 2 
+		WHERE StudentId = 2;
+
+	-->> Delete 
+		-- Delete specific rows 
+		DELETE FROM academics.Students WHERE StudentId = 1; 
+		
+		-- Delete top N rows
+		DELETE TOP (3) FROM academics.Students WHERE Branch_ID = 2; 
+
+
+
+		
+
 
 
 
